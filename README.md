@@ -7,6 +7,6 @@ Is a polyalphabetic substitution cipher, very similar to the Vigenère cipher. I
 
 - NOTE: This implementation, the key limit is from 1-13, 13 being half of 26. Also there isn't a limit on how many keys one can have. The algorithm works more like how a human would use the the cipher.
 
--- Take a letter from the message. 
--- Look the letter up in the alphabet. 
--- Use the codeset letter that corresponds to the alphabet position.
+- Take a letter from the message. 
+- Look the letter up in the alphabet. 
+- Use the codeset letter that corresponds to the alphabet position.
