@@ -1,4 +1,4 @@
-My adventure into the C programming language.
+#My adventure into the C programming language.
 
 While looking through the net, I came across a youtube video Harvert's CS50. It's about computer science, an introduction. I got to the algorithm and decided to try a C program. I used what I learned in the video and some online searches and came up with my first C program. It's not a hello world program. It's an implementation of Gronsfeld cipher.
 
@@ -6,6 +6,6 @@ The Gronsfeld cipher is a polyalphabetic substitution cipher, very similar to th
 
 NOTE: This implementation, the key limit is from 1-13, 13 being half of 26. Also there isn't a limit on how many keys one can have. The algorithm works more like how a human would use the the cipher.
 
-Take a letter from the message. 
-Look the letter up in the alphabet. 
-Use the codeset letter that corresponds to the alphabet position.
+- Take a letter from the message. 
+- Look the letter up in the alphabet. 
+- Use the codeset letter that corresponds to the alphabet position.
