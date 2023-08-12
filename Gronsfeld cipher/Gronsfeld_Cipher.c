@@ -35,13 +35,13 @@ int main(void)
 {   
     // Get user message to encode
     printf("\nGronsfeld cipher\n\n");
-    char* data = getSentenceFromUser();
+    char* data = Get_Sentence();
 
     // Get user input keys to use for encoding
     int keys[MAX_KEYS];
     int numKeys;
 
-    getInputKeys(keys, &numKeys);
+    Get_Keys(keys, &numKeys);
 
     printf("\n\nNumber of keys entered: %d key values: ", numKeys);
     for (int i = 0; i < numKeys; i++) {

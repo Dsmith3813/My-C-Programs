@@ -26,8 +26,8 @@ int Letter_found = 0;       // Boolean; 1 true, 0 false
 void Find_in_Alphabet(char letter);
 void Find_in_codeset(char letter);
 void Shift_CodeSet(int shift);
-char* getSentenceFromUser();
-void getInputKeys(int keys[], int* numKeys);
+char* Get_Sentence();
+void Get_Keys(int keys[], int* numKeys);
 
 
 #endif

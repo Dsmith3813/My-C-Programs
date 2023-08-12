@@ -55,7 +55,7 @@ void Shift_CodeSet(int shift)
     free(temp);                                 // Clear out temp
 }
 
-char* getSentenceFromUser() 
+char* Get_Sentence() 
 {
     char* sentence = (char*)malloc(MAX_SENTENCE_LENGTH * sizeof(char));
 
@@ -76,7 +76,7 @@ char* getSentenceFromUser()
     return sentence;
 }
 
-void getInputKeys(int keys[], int* numKeys) {
+void Get_Keys(int keys[], int* numKeys) {
     printf("\nPlease input keys in the format 1, 2, 3, ... (up to %d keys)\n", MAX_KEYS);
     printf("Each key value should be in the range from 1 to 13.\n");
 
