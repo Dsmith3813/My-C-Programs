@@ -1,8 +1,6 @@
 // Encode system functions.
 
-
 #include "encode.h"
-
 
 void Find_in_Alphabet(char letter)
 // To find the index of a letter in the alphabet
@@ -55,4 +53,50 @@ void Shift_CodeSet(int shift)
         codeset[(CSLEN - shift) + i] = temp[i];
 
     free(temp);                                 // Clear out temp
+}
+
+char* getSentenceFromUser() 
+{
+    char* sentence = (char*)malloc(MAX_SENTENCE_LENGTH * sizeof(char));
+
+    if (sentence == NULL) 
+    {
+        printf("\n>> Memory allocation failed.\n");
+        exit(1);
+    }
+
+    printf("\nPlease enter a sentence: ");
+    fgets(sentence, MAX_SENTENCE_LENGTH, stdin);
+
+    // Remove newline character from the end of the sentence
+    int len = strlen(sentence);
+    if (len > 0 && sentence[len - 1] == '\n') 
+        sentence[len - 1] = '\0';
+
+    return sentence;
+}
+
+void getInputKeys(int keys[], int* numKeys) {
+    printf("\nPlease input keys in the format 1, 2, 3, ... (up to %d keys)\n", MAX_KEYS);
+    printf("Each key value should be in the range from 1 to 13.\n");
+
+    char input[100];
+    printf("Enter keys: ");
+    fgets(input, sizeof(input), stdin);
+
+    *numKeys = 0;
+    char* token = strtok(input, ",");
+    while (token != NULL && *numKeys < MAX_KEYS) {
+        int keyValue = atoi(token);
+        if (keyValue >= 1 && keyValue <= 13) {
+            keys[*numKeys] = atoi(token);
+            (*numKeys)++;
+        } else {
+            printf("\nInvalid key value entered: %s\n", token);
+            printf("Defaulting to a key value of 5");
+            keys[*numKeys] = 5;
+            (*numKeys)++;
+        }
+        token = strtok(NULL, ",");
+    }
 }
